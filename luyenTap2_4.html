@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyenTap2_4</title>
+</head>
+<body>
+Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+
+<script>
+  function kiemTraInPut(value){
+    if (isNaN(value)){ //Cach2 !isNaN
+      return "False"
+    }else{
+      return "True"
+    }
+  }
+  let a=prompt("Hãy nhập bất kì  1 chuỗi :")
+  kiemTraInPut(a);
+  console.log(kiemTraInPut(a));
+
+</script>
+</body>
+</html>

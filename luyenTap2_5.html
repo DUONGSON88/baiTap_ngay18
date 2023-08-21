@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyenTap2_5</title>
+</head>
+<body>
+Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+
+<script>
+  // function timMin(a,b,c){
+  //   if (a<b && a<c){
+  //     return a+" là số nhỏ nhất"
+  //   }else if (a>c){
+  //     return c+" là số nhỏ nhất"
+  //   }else {
+  //     return b+ " là số nhỏ nhất"
+  //   }
+  // }
+  // let x=+prompt("number 1")
+  // let y=+prompt("number 2")
+  // let z=+prompt("number 3")
+  // timMin(x,y,z)
+  // console.log(timMin(x,y,z))
+  // alert(timMin(x,y,z))
+  function timMin(a,b,c){
+      let arr=[a,b,c]
+      for (let i = 0; i <arr.length; i++) {
+          min=arr[0]
+          if (arr[i]<min){
+              min=arr[i]
+          }return alert("Gia tri nho nhat la :"+min)
+
+      }
+  }
+  let x=prompt()
+  let y=prompt()
+  let z=prompt()
+  timMin(x,y,z)
+
+</script>
+</body>
+</html>

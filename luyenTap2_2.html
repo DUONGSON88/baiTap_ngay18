@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+<body>
+<script>
+  function sumChuVi(x){
+      return x*2*Math.PI
+  }
+  function sumDienTich(x){
+      return Math.pow(x,2)*Math.PI
+  }
+
+  let a=+prompt("Hãy nhập bán kính hình tròn")
+  sumChuVi(a);
+  sumDienTich(a);
+  alert(`Diện tích hình tròn là ${sumDienTich(a)} Chu Vi hình tròn là ${sumChuVi(a)}`)
+</script>
+
+</body>
+</html>

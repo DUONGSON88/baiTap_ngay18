@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quanLySanPham</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+<div>
+    <input type="text" placeholder="New Product">
+    <input type="button" onclick="addproducts()" value="Add"
+           style="background-color: forestgreen;color: #dddddd;};">
+
+</div>
+
+<h3>Display All Product</h3>
+<table>
+    <div id="formEdit">
+
+    </div>
+    <tr>
+        <td>Product Name</td>
+        <td></td>
+        <td></td>
+        <td style="color: brown">9 product</td>
+    </tr>
+    <tbody id="product">
+
+    </tbody>
+
+</table>
+<script>
+    let products = ["SonyXperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4", "Apple iPhone 6S", "Xiaomi Mi 5s Plus", "Apple iPhone 8 Plus", "Fujitsu F-04E", "Oppo A7"];
+
+    function showAll() {
+        let str = "";
+        for (let i = 0; i < products.length; i++) {
+            str += `
+        <tr>
+            <td>${products[i]}</td>
+            <td style="background-color: forestgreen;color: #dddddd" onclick="showformEdit(${i})">Edit</td>
+            <td style="background-color: forestgreen;color: #dddddd" onclick="remove(${i})">Delete</td>
+        </tr>
+         `
+        }
+        document.getElementById("product").innerHTML = str;
+    }
+
+    showAll();
+
+    function addproducts() {
+        let product = document.getElementById("addproducts").value;
+        products.push(product);
+        showAll();
+    }
+
+    function remove(index) {
+        products.splice(index, 1);
+        showAll();
+    }
+
+    function showformEdit(index) {
+        let productEdit = products[index];
+        document.getElementById("formEdit").innerHTML = `
+          <input type="text" value="${productEdit}" id="productEdit">
+          <button onclick="edit(${index})">Save</button>;`
+    }
+
+    function edit(index) {
+        let newProduct = document.getElementById("productEdit").value;
+        products[index] = newProduct;
+        showAll();
+        document.getElementById("formEdit").innerHTML="";
+    }
+
+</script>
+</body>
+</html>
